@@ -1,0 +1,28 @@
+[
+	{
+		"name":"WOL Packages",
+		"description" : "Send WOL package to a target of your choice on startup",
+		"id":"service.wol",
+		"version":"0.0.1",
+		"dependencies" :[{"hyperion" : "2.0.0"}],
+		"changelog" : [{"0.0.1 Crunchy Cudator":"-New featrues -bugfixs -other stuff"}],
+		"icon" : "wol.jpg",
+		"provider":"hyperion-project",
+		"support":"https://hyperion-project.org",
+		"source" :"https://github.com/hyperion-project",
+		"md5":"6HD92hdj948h67"
+	},
+	{
+		"name":"Kodi Connector",
+		"description" : "Connect to a Kodi instance to get player state",
+		"id":"service.kodi",
+		"version" : "0.0.1",
+		"dependencies" :[{"hyperion" : "2.0.0"}],
+		"changelog" : [{"0.0.1 Crunchy Cudator":"-New featrues -bugfixs -other stuff"}],
+		"icon" : "kodi.jpg",
+		"provider":"hyperion-project",
+		"support":"https://hyperion-project.org",
+		"source" :"https://github.com/hyperion-project",
+		"md5":"6HD92hdj948h67"
+	}
+]
