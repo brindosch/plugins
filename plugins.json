@@ -10,31 +10,30 @@
 		"provider":"hyperion-project",
 		"support":"https://hyperion-project.org",
 		"source" :"https://github.com/hyperion-project",
-		"md5":"6HD92hdj948h67"
+		"sha1":"20de1f68ddd35b624cdd82b44854e58994171799"
 	},
 	{
 		"name":"Kodi Connector",
 		"description" : "Connect to a Kodi instance to get player state",
 		"id":"service.kodi",
-		"version" : "0.0.1",
+		"version" : "0.0.2",
 		"dependencies" :{"hyperion" : "2.0.0", "module.httplib2" : "0.5.0"},
 		"changelog" : [{"0.0.1 Crunchy Cudator":"-New featrues -bugfixs -other stuff"}],
 		"icon" : "kodi.jpg",
 		"provider":"hyperion-project",
 		"support":"https://hyperion-project.org",
 		"source" :"https://github.com/hyperion-project",
-		"md5":"6HD92hdj948h67"
+		"sha1":"a771bbef1555c7b11a0474b216293d56a5725aea"
 	},
 	{
 		"name":"HTTPlib2 Module",
 		"description" : "Simple usage of http requests in python with httlib2",
 		"id":"module.httplib2",
 		"version" : "0.5.1",
-		"changelog" : [{"0.0.1 Crunchy Cudator":"-New featrues -bugfixs -other stuff"}],
-		"icon" : "kodi.jpg",
+		"icon" : "httplib2.jpg",
 		"provider":"hyperion-project",
 		"support":"https://pypi.python.org/pypi/httplib2/0.7.2",
 		"source" :"https://pypi.python.org/pypi/httplib2/0.7.2",
-		"md5":"6HD92hdj948h67"
+		"sha1":"5644875603d5bd9655422f2b96ab13257e016973"
 	}
 ]
