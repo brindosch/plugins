@@ -30,7 +30,6 @@
 		"description" : "Simple usage of http requests in python with httlib2",
 		"id":"module.httplib2",
 		"version" : "0.0.1",
-		"dependencies" :{"hyperion" : "2.0.0", "module.httplib2" : "0.5.0"},
 		"changelog" : [{"0.0.1 Crunchy Cudator":"-New featrues -bugfixs -other stuff"}],
 		"icon" : "kodi.jpg",
 		"provider":"hyperion-project",
