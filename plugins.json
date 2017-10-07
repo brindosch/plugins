@@ -9,8 +9,7 @@
 		"icon" : "wol.jpg",
 		"provider":"hyperion-project",
 		"support":"https://hyperion-project.org",
-		"source" :"https://github.com/hyperion-project",
-		"sha1":"20de1f68ddd35b624cdd82b44854e58994171799"
+		"source" :"https://github.com/hyperion-project"
 	},
 	{
 		"name":"Kodi Connector",
@@ -22,8 +21,7 @@
 		"icon" : "kodi.jpg",
 		"provider":"hyperion-project",
 		"support":"https://hyperion-project.org",
-		"source" :"https://github.com/hyperion-project",
-		"sha1":"a771bbef1555c7b11a0474b216293d56a5725aea"
+		"source" :"https://github.com/hyperion-project"
 	},
 	{
 		"name":"HTTPlib2 Module",
@@ -33,7 +31,6 @@
 		"icon" : "httplib2.jpg",
 		"provider":"hyperion-project",
 		"support":"https://pypi.python.org/pypi/httplib2/0.7.2",
-		"source" :"https://pypi.python.org/pypi/httplib2/0.7.2",
-		"sha1":"4413a3bf3225e3a0b96e1fa29ac70910b119133a"
+		"source" :"https://pypi.python.org/pypi/httplib2/0.7.2"
 	}
 ]
