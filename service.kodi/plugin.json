@@ -1,0 +1,12 @@
+{
+	"name":"Kodi Connector",
+	"description" : "Connect to a Kodi instance to get player state",
+	"id":"service.kodi",
+	"version" : "0.0.2",
+	"dependencies" :{"hyperion" : "2.0.0", "module.httplib2":"0.10.3"},
+	"changelog" : [{"0.0.1 Crunchy Cudator":"-New featrues -bugfixs -other stuff"}],
+	"icon" : "kodi.jpg",
+	"provider":"hyperion-project",
+	"support":"https://hyperion-project.org",
+	"source" :"https://github.com/hyperion-project"
+}
