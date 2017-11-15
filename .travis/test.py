@@ -37,7 +37,7 @@ def printErrors():
 # Test commit message for []
 TC = os.environ["TRAVIS_COMMIT"]
 if "[" not in TC or "]" not in TC:
-	addError("COMMIT-HEADER","The pull request header should contain the plugin id in [] example: [service.kodi]")
+	addError("COMMIT-HEADER","The pull request header should contain the plugin id in [] example: [service.kodi] Current commit: "+TC)
 	# fast abort, we need the id
 	printErrors()
 
