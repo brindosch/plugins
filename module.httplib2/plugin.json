@@ -1,10 +1,10 @@
 {
 	"name":"HTTPlib2 Module",
-	"description" : "Simple usage of http requests in python with httlib2",
+	"description" : "Simple usage of http requests in python with httplib2",
 	"id":"module.httplib2",
 	"version" : "0.10.3",
-	"icon" : "httplib2.jpg",
-	"provider":"hyperion-project",
-	"support":"https://pypi.python.org/pypi/httplib2/0.10.3",
-	"source" :"https://pypi.python.org/pypi/httplib2/0.10.3"
+	"provider":"Joe Gregorio",
+	"support":"https://github.com/httplib2/httplib2/issues",
+	"source" :"https://github.com/httplib2/httplib2",
+	"licence" : "MIT"
 }

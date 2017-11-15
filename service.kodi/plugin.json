@@ -8,5 +8,6 @@
 	"icon" : "kodi.jpg",
 	"provider":"hyperion-project",
 	"support":"https://hyperion-project.org",
-	"source" :"https://github.com/hyperion-project"
+	"source" :"https://github.com/hyperion-project",
+	"licence" : "MIT"
 }
