@@ -5,4 +5,4 @@
     - pip install -r ./.travis/deps.txt
   script:
     - if [[ $TRAVIS_EVENT_TYPE == 'push' ]]; then python ./.travis/publish.py; fi
-    - if [[ $TRAVIS_EVENT_TYPE == 'pull_request' ]]; then python ./.travis/testPr.py; fi
+    - if [[ $TRAVIS_EVENT_TYPE == 'pull_request' ]]; then python ./.travis/test.py; fi
