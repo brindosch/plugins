@@ -1,0 +1,12 @@
+{
+	"name":"Service Another",
+	"description" : "Send another Service Another",
+	"id":"service.another",
+	"version" : "0.0.1",
+	"dependencies" :{"hyperion" : "2.0.0"},
+	"changelog" : [{"0.0.1 Crunchy Cudator":"-New featrues -bugfixs -other stuff"}],
+	"provider":"hyperion-project",
+	"support":"https://hyperion-project.org",
+	"source" :"https://github.com/hyperion-project",
+	"licence" : "MIT"
+}

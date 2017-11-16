@@ -23,7 +23,7 @@ TC = os.environ["TRAVIS_COMMIT"]
 
 # not all commit messages needs to be a upload request, filter them
 if "[" not in TC or "]" not in TC:
-	print("Aborting script, nothing to do as there where no [] in commit message")
+	print("Aborting script, nothing to do as there where no [] in commit message. Message: "+TC)
 	exit()
 
 # add auth header
@@ -88,7 +88,7 @@ def upload(filePath, fileName):
 
 # extract plugin id from commit
 pluginid = (TC.split("["))[1].split("]")[0]
-print("Starting processing of plugin id"+pluginid)
+print("Starting processing of plugin id: "+pluginid)
 
 # verify commit id is found as folder name
 # zip on success (push to ZIPPEDFILES)
