@@ -36,7 +36,7 @@ def printErrors():
 
 # Test commit message for []
 TC = subprocess.check_output(["git", "log", "-n", "1", "--skip", "1", "--pretty=format:\"%B\""]) #os.environ["TRAVIS_COMMIT_MESSAGE"] the travis env_var reffers to "Merge hash into hash" on PRs
-if "[" not in TC or "]" not in TC:
+if b'[' not in TC or b']' not in TC:
 	addError("COMMIT-HEADER","The commit should contain the plugin id in [] example: [service.kodi] The current commit message is: "+TC)
 	# fast abort, we need the id
 	printErrors()
