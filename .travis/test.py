@@ -2,7 +2,7 @@
 #####
 # Testing script for plugin pull requests to fullfill the requirements
 #####
-import os, simplejson as json
+import os, subprocess, simplejson as json
 
 # Errors/Warnings store
 Errors = []
@@ -34,6 +34,8 @@ def printErrors():
 	print("###### TEST END ######")
 	exit(True)
 
+output = subprocess.check_output(["git", "-s --format=%B"])
+print("OUTPUT:"+output)
 # Test commit message for []
 TC = os.environ["TRAVIS_COMMIT_MESSAGE"]
 if "[" not in TC or "]" not in TC:
