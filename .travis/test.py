@@ -35,7 +35,7 @@ def printErrors():
 	exit(True)
 
 output = subprocess.check_output(["git", "show", "-s", "--format=%B"])
-print("OUTPUT:"+output)
+print("OUTPUT:"+str(output))
 # Test commit message for []
 TC = os.environ["TRAVIS_COMMIT_MESSAGE"]
 if "[" not in TC or "]" not in TC:
