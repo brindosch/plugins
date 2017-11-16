@@ -1,2 +1,2 @@
-simplejson
-httplib2
+simplejson<=3.12
+httplib2<=0.10
