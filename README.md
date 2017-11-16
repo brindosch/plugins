@@ -21,4 +21,3 @@ You are free to add or improve any plugin that might be useful for other Hyperio
 ## Documentation
 API documentation and more information can be found here: [Plugins Docu](https://docs.hyperion-project.org/en/developer/plugins)
 
-
