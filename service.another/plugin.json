@@ -7,5 +7,6 @@
 	"changelog" : [{"0.0.1 Crunchy Cudator":"-New featrues -bugfixs -other stuff"}],
 	"provider":"hyperion-project",
 	"support":"https://hyperion-project.org",
-	"source" :"https://github.com/hyperion-project"
+	"source" :"https://github.com/hyperion-project",
+	"licence" : "MIT"
 }

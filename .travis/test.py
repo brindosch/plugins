@@ -21,23 +21,25 @@ def getSubDirs():
 
 def addError(test,msg):
 	global Errors
-	Errors.append("TEST: "+test+": "+msg)
+	Errors.append("## TEST: "+test+": "+msg)
 
 def addWarning(test,msg):
 	global Warnings
 	Warnings.append("TEST: "+test+": "+msg)
 
 def printErrors():
+    print("###############################################")
 	print("###### TEST FAILED PLEASE FIX ALL ERRORS ######")
 	for err in Errors:
 		print(err)
 	print("###### TEST END ######")
+    print("######################")
 	exit(True)
 
 # Test commit message for []
 TC = subprocess.check_output(["git", "log", "-n", "1", "--skip", "1", "--pretty=format:\"%B\""]).decode() #os.environ["TRAVIS_COMMIT_MESSAGE"] the travis env_var reffers to "Merge hash into hash" on PRs
 if '[' not in TC or ']' not in TC:
-	addError("COMMIT-HEADER","The commit should contain the plugin id in [] example: [service.kodi] The current commit message is: "+TC)
+	addError("COMMIT-HEADER","The last commit message should contain the plugin id in [] example: [service.kodi] The current commit message is: "+TC)
 	# fast abort, we need the id
 	printErrors()
 
@@ -49,7 +51,7 @@ if prPluginId not in getSubDirs():
 	printErrors()
 
 
-print("Testing plugin id: "+prPluginId)
+print("--> TESTING PLUGIN ID: "+prPluginId)
 
 # Let's parse the meta data
 try:
@@ -121,7 +123,9 @@ if parsedMeta["id"].startswith("service."):
 if Errors:
 	printErrors()
 
+print("######################################")
 print("###### TEST SUCCESSFULLY PASSED ######")
+print("######################################")
 if Warnings:
 	print("\n###### WARNINGS ######")
 	for warn in Warnings:
