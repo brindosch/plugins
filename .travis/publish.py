@@ -19,7 +19,7 @@ GH_UPLOAD = "https://uploads.github.com/repos/"+GH_USR+"/"+GH_REP+"/releases/"
 AUTHHEAD = {'Authorization': 'token '+GH_TOK}
 HEADERS = {'Content-type': 'application/zip'}
 
-TC = os.environ["TRAVIS_COMMIT"]
+TC = os.environ["TRAVIS_COMMIT_MESSAGE"]
 
 # not all commit messages needs to be a upload request, filter them
 if "[" not in TC or "]" not in TC:
