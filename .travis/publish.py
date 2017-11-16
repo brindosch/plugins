@@ -88,7 +88,7 @@ def upload(filePath, fileName):
 	elif parsedResp["status"] != 200:
 		print("Failed to upload: "+fileName,"Server Response: "+response)
 		exit(True)
-    else:
+	else:
 		print("Upload was successfull: "+fileName)
 
 # extract plugin id from commit
