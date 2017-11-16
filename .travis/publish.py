@@ -89,7 +89,7 @@ def upload(filePath, fileName):
 		print("Upload failed. Error in response!")
 		print("Status: "+str(response["status"]))
 		exit(True)
-	else
+	else:
 		print("Upload was successful: "+fileName)
 
 # extract plugin id from commit
