@@ -85,9 +85,9 @@ def upload(filePath, fileName):
 			if 'code' in errors:
 				print("There where errors during upload Code: "+errors["code"]+" FileName: "+fileName)
 				exit(True)
-	elif response["status"] != 201:
+	elif response["status"] != "201":
 		print("Upload failed. Error in response!")
-		print("Status: "+str(response["status"]))
+		print("Status: "+response["status"])
 		exit(True)
 	else:
 		print("Upload was successful: "+fileName)
