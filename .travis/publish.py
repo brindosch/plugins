@@ -32,7 +32,7 @@ HEADERS.update(AUTHHEAD)
 ZIPPEDFILES = []
 GITHUB_FILES = []
 REPOINDEX = []
-
+httplib2.debuglevel = 1
 http = httplib2.Http()
 
 # get all module. and service. subdirs in MDIR
@@ -79,12 +79,16 @@ def upload(filePath, fileName):
 	response, content = http.request(GH_ASSET, 'POST', headers=HEADERS, body=open(filePath, "rb"))
 	print(response,content)
 	parsed = json.loads(content)
+	parsedResp = json.loads(response)
 	if 'errors' in parsed:
 			errors = parsed["errors"][0]
 			if 'code' in errors:
 				print("There where errors during upload Code: "+errors["code"]+" FileName: "+fileName)
 				exit(True)
-	else:
+	elif parsedResp["status"] != 200:
+		print("Failed to upload: "+fileName,"Server Response: "+response)
+		exit(True)
+    else:
 		print("Upload was successfull: "+fileName)
 
 # extract plugin id from commit
