@@ -32,7 +32,6 @@ HEADERS.update(AUTHHEAD)
 ZIPPEDFILES = []
 GITHUB_FILES = []
 REPOINDEX = []
-httplib2.debuglevel = 1
 http = httplib2.Http()
 
 # get all module. and service. subdirs in MDIR
@@ -76,20 +75,22 @@ def delete(id):
 # upload a file to github
 def upload(filePath, fileName):
 	GH_ASSET = GH_UPLOAD+TAG_ID+"/assets?name="+fileName
-	response, content = http.request(GH_ASSET, 'POST', headers=HEADERS, body=open(filePath, "rb"))
-	print(response,content)
+	payload = open(filePath, "rb").read()
+	ContLengthHead = {'Content-Length':str(len(payload))}
+	ContLengthHead.update(HEADERS)
+	response, content = http.request(GH_ASSET, 'POST', headers=ContLengthHead, body=payload)
 	parsed = json.loads(content)
-	parsedResp = json.loads(response)
 	if 'errors' in parsed:
 			errors = parsed["errors"][0]
 			if 'code' in errors:
 				print("There where errors during upload Code: "+errors["code"]+" FileName: "+fileName)
 				exit(True)
-	elif parsedResp["status"] != 200:
-		print("Failed to upload: "+fileName,"Server Response: "+response)
+	elif response["status"] != 201:
+		print("Upload failed. Error in response!")
+		print("Status: "+str(response["status"]))
 		exit(True)
-	else:
-		print("Upload was successfull: "+fileName)
+	else
+		print("Upload was successful: "+fileName)
 
 # extract plugin id from commit
 pluginid = (TC.split("["))[1].split("]")[0]
