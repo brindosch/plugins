@@ -34,7 +34,7 @@ def printErrors():
 	print("###### TEST END ######")
 	exit(True)
 
-output = subprocess.check_output(["git", "show", "-s", "--format=%B"])
+output = subprocess.check_output(["git", "log", "-n", "1", "--skip", "1", "--pretty=format:\"%B\""])
 print("OUTPUT:"+str(output))
 # Test commit message for []
 TC = os.environ["TRAVIS_COMMIT_MESSAGE"]
