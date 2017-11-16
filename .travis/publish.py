@@ -77,8 +77,8 @@ def delete(id):
 def upload(filePath, fileName):
 	GH_ASSET = GH_UPLOAD+TAG_ID+"/assets?name="+fileName
 	response, content = http.request(GH_ASSET, 'POST', headers=HEADERS, body=open(filePath, "rb"))
+	print(response,content)
 	parsed = json.loads(content)
-    print(response,content)
 	if 'errors' in parsed:
 			errors = parsed["errors"][0]
 			if 'code' in errors:
