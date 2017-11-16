@@ -28,12 +28,12 @@ def addWarning(test,msg):
 	Warnings.append("TEST: "+test+": "+msg)
 
 def printErrors():
-    print("###############################################")
+	print("###############################################")
 	print("###### TEST FAILED PLEASE FIX ALL ERRORS ######")
 	for err in Errors:
 		print(err)
 	print("###### TEST END ######")
-    print("######################")
+	print("######################")
 	exit(True)
 
 # Test commit message for []
