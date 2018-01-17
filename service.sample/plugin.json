@@ -1,0 +1,12 @@
+{
+	"name":"Sample Service Plugin",
+	"description" : "The sample service plugin is a playground plugin which helps you to develope your first service plugin. From basic usage of the API to working with option ui elements",
+	"id":"service.sample",
+	"version" : "0.0.1",
+	"category":"sample",
+	"dependencies" :{"hyperion" : "2.0.0"},
+	"changelog" : [{"0.0.2":"-New featrues -bugfixs -other stuff"},{"0.0.1":"-Initial release"}],
+	"provider":"hyperion-project",
+	"support":"https://hyperion-project.org/threads/service-sample-service-plugin.2667/",
+	"source" :"https://github.com/hyperion-project"
+}

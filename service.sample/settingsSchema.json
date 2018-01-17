@@ -1,0 +1,62 @@
+{
+	"type":"object",
+	"required":true,
+	"properties":{
+		"myMealOption": {
+			"type": "string",
+			"title":"Favourite meal",
+			"propertyOrder" : 1
+		},
+		"mySelectionOption": {
+			"type": "string",
+			"title":"Choose one option",
+			"enum" : ["option1","option2","option3"],
+			"default" : "option2",
+			"options" : {
+				"enum_titles" : ["Option 1 Title", "Option 2 Title", "Option 3 Title"]
+			},
+			"propertyOrder" : 2
+		},
+		"myIntegerOption": {
+			"type": "integer",
+			"title":"Integer option",
+			"default": 178,
+			"minimum": 1,
+			"maximum": 1000,
+			"append" : "edt_append_ms",
+			"propertyOrder" : 3
+		},
+		"myNumberOption": {
+			"type": "number",
+			"title":"Number option",
+			"default": 16.4,
+			"propertyOrder" : 4
+		},
+		"myBooleanOption": {
+			"type": "boolean",
+			"title":"Show 'Favourite color'",
+			"default": true,
+			"propertyOrder" : 5
+		},
+		"myFavouriteColorOption": {
+			"type": "array",
+			"title" : "Favourite color",
+			"format":"colorpicker",
+			"default" : [255,255,0],
+			"items":{
+				"type":"integer",
+				"minimum": 0,
+				"maximum": 255
+			},
+			"minItems": 3,
+			"maxItems": 3,
+			"options":{  
+				"dependencies":{  
+					"myBooleanOption":true
+				}
+			},
+			"propertyOrder" : 6
+		}
+	},
+	"additionalProperties": false
+}
