@@ -1,0 +1,10 @@
+{
+	"name":"WakeOnLan Module",
+	"description" : "Provide simple WakeOnLan usage for Python",
+	"id":"module.wakeonlan",
+	"version" : "0.2.2",
+	"provider":"Remco Haszing",
+	"support":"https://github.com/remcohaszing/pywakeonlan/issues",
+	"source" :"https://github.com/remcohaszing/pywakeonlan",
+	"licence" : "WTFPL"
+}
