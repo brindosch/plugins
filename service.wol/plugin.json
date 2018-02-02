@@ -6,7 +6,8 @@
 	"category" : "utility",
 	"dependencies" :{"hyperion" : "2.0.0", "module.wakeonlan" : "0.2.2"},
 	"changelog" : [{"1.0.0":"-Initial release"}],
-	"provider":"hyperion-project",
-	"support":"https://hyperion-project.org",
-	"source" :"https://github.com/hyperion-project"
+	"provider":"hyperion-project, brindosch",
+	"support":"https://hyperion-project.org/threads/wake-on-lan.2689/",
+	"source" :"https://github.com/hyperion-project",
+	"licence" : "MIT"
 }
