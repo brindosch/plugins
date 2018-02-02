@@ -2,34 +2,22 @@
 	"type":"object",
 	"required":true,
 	"properties":{
-		"output": {
-			"type": "string",
-			"title":"plg_aOption",
-			"enum" : ["/dev/spidev0.0","/dev/spidev0.1"],
-			"default" : "/dev/spidev0.0",
+		"macAddresses": {
+			"type": "array",
+			"title":"Target MAC Addresses",
+			"items":{
+				"type":"string",
+				"title":"MAC Address",
+				"minLength": 12,
+				"maxLength": 17
+			},
 			"propertyOrder" : 1
 		},
-		"rate": {
-			"type": "integer",
-			"title":"edt_dev_spec_baudrate_title",
-			"default": 1000000,
-			"propertyOrder" : 2
-		},
-		"invert": {
+		"sendContinuous": {
 			"type": "boolean",
-			"title":"edt_dev_spec_invert_title",
+			"title":"Send continuous",
 			"default": false,
-			"propertyOrder" : 3
-		},
-		"latchTime": {
-			"type": "integer",
-			"title":"edt_dev_spec_latchtime_title",
-			"default": 1,
-			"append" : "edt_append_ms",
-			"minimum": 1,
-			"maximum": 1000,
-			"access" : "expert",
-			"propertyOrder" : 4
+			"propertyOrder" : 2
 		}
 	},
 	"additionalProperties": true
